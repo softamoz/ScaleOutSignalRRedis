@@ -1,0 +1,55 @@
+﻿@page "/"
+@using Microsoft.AspNetCore.SignalR.Client
+@inject NavigationManager Nav
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+
+<SurveyPrompt Title="How is Blazor working for you?" />
+
+<label>Message : </label>
+<input type="text" @bind="@_message" />
+<button @onclick="SendMessage">Send To All Clients</button>
+<br />
+@foreach (var message in _messages)
+{
+    <p>@message</p>
+}
+
+
+
+@code
+{
+    private HubConnection _chatHub;
+
+    private string _message = string.Empty;
+
+    private readonly List<string> _messages = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        _chatHub = new HubConnectionBuilder()
+            .WithUrl(Nav.ToAbsoluteUri("/Hubs/ChatHub"))
+            .WithAutomaticReconnect()
+            .Build();
+
+        _chatHub.On<string>("ShowMessageInClient", message =>
+        {
+            _messages.Add(message);
+            StateHasChanged();
+
+        });
+
+        await _chatHub.StartAsync();
+
+        await base.OnInitializedAsync();
+    }
+
+
+    private async Task SendMessage()
+    {
+        await _chatHub.SendAsync("SendToAll", _message);
+        _message = string.Empty;
+    }
+}

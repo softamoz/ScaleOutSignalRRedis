@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31320.298
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalRBlazorRedis.Server", "SignalRBlazorRedis\Server\SignalRBlazorRedis.Server.csproj", "{ABBFDFC1-9E5A-4B09-AC41-47D5C3256624}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalRBlazorRedis.Client", "SignalRBlazorRedis\Client\SignalRBlazorRedis.Client.csproj", "{A01FB23A-5D48-4FC0-887A-4D1E13524E39}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalRBlazorRedis.Shared", "SignalRBlazorRedis\Shared\SignalRBlazorRedis.Shared.csproj", "{AE7B39FE-9C5D-4E2E-89CD-CBC7FB12533E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ABBFDFC1-9E5A-4B09-AC41-47D5C3256624}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABBFDFC1-9E5A-4B09-AC41-47D5C3256624}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABBFDFC1-9E5A-4B09-AC41-47D5C3256624}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABBFDFC1-9E5A-4B09-AC41-47D5C3256624}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A01FB23A-5D48-4FC0-887A-4D1E13524E39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A01FB23A-5D48-4FC0-887A-4D1E13524E39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A01FB23A-5D48-4FC0-887A-4D1E13524E39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A01FB23A-5D48-4FC0-887A-4D1E13524E39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE7B39FE-9C5D-4E2E-89CD-CBC7FB12533E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE7B39FE-9C5D-4E2E-89CD-CBC7FB12533E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE7B39FE-9C5D-4E2E-89CD-CBC7FB12533E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE7B39FE-9C5D-4E2E-89CD-CBC7FB12533E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {92BEA3B9-9554-4140-9619-DC4EC05C65AB}
+	EndGlobalSection
+EndGlobal
